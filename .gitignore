@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# IDE / Editor junk
+.vscode/
+.vscode-insiders/
+
+# Dependencies (safety)
+node_modules/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
