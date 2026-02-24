@@ -494,7 +494,7 @@ async def on_button(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 def main():
-    if not TOKEN or TOKEN == "PASTE_YOUR_TOKEN_HERE":
+    if not TOKEN or TOKEN == "8397296110:AAGtA2awgyB3K90TOMJEx4f46f6zoWah230":
         raise RuntimeError("Set BOT_TOKEN env var or paste your real token into TOKEN.")
 
     app = ApplicationBuilder().token(TOKEN).build()
