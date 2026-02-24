@@ -26,7 +26,7 @@ from reportlab.lib.units import mm
 from reportlab.lib.utils import ImageReader
 
 # ====== CONFIG ======
-TOKEN = os.getenv("BOT_TOKEN") or "PASTE_YOUR_TOKEN_HERE"
+TOKEN = os.getenv("BOT_TOKEN") or "8397296110:AAGtA2awgyB3K90TOMJEx4f46f6zoWah230"
 
 MAX_IMAGES_PER_SESSION = 25            # upload limit
 MAX_IMAGE_BYTES = 10 * 1024 * 1024     # 10MB per image (document or photo)
