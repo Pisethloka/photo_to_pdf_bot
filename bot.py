@@ -66,21 +66,21 @@ def kb(uid: int) -> InlineKeyboardMarkup:
     enhance = user_enhance.get(uid, DEFAULT_ENHANCE)
 
     mode_label = "Merge 📄" if mode == "merge" else "Separate 📑"
-    quality_label = "High ✅" if quality == "high" else "Compressed 🗜️"
+    quality_label = "High" if quality == "high" else "Compressed 🗜️"
     enhance_label = "Enhance ✨ ON" if enhance else "Enhance ✨ OFF"
 
     return InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("Done ✅", callback_data="DONE"),
+                InlineKeyboardButton("Done", callback_data="DONE"),
                 InlineKeyboardButton("Clear 🧹", callback_data="CLEAR"),
             ],
             [
-                InlineKeyboardButton("Set Name 📝", callback_data="SETNAME"),
+                InlineKeyboardButton("Set File Name 📝", callback_data="SETNAME"),
                 InlineKeyboardButton(f"Mode: {mode_label} 🔁", callback_data="MODE"),
             ],
             [
-                InlineKeyboardButton(f"Quality: {quality_label} 🔧", callback_data="QUALITY"),
+                InlineKeyboardButton(f"Quality: {quality_label}", callback_data="QUALITY"),
                 InlineKeyboardButton(enhance_label, callback_data="ENHANCE"),
             ],
         ]
@@ -112,7 +112,7 @@ def status_text(uid: int) -> str:
         f"🔁 Mode: *{mode_label}*\n"
         f"🔧 Quality: *{quality_label}*\n"
         f"✨ Enhance: *{enhance_label}*\n\n"
-        "Send more images, or press *Done ✅*."
+        "Send more images, or press *Done* when finished."
     )
 
 
