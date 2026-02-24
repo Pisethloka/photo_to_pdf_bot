@@ -26,7 +26,7 @@ from reportlab.lib.units import mm
 from reportlab.lib.utils import ImageReader
 
 # ====== CONFIG ======
-TOKEN = os.getenv("BOT_TOKEN") or "8397296110:AAGtA2awgyB3K90TOMJEx4f46f6zoWah230"
+TOKEN = os.getenv("BOT_TOKEN")
 
 MAX_IMAGES_PER_SESSION = 25            # upload limit
 MAX_IMAGE_BYTES = 10 * 1024 * 1024     # 10MB per image (document or photo)
@@ -494,7 +494,7 @@ async def on_button(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 def main():
-    if not TOKEN or TOKEN == "8397296110:AAGtA2awgyB3K90TOMJEx4f46f6zoWah230":
+    if not TOKEN:
         raise RuntimeError("Set BOT_TOKEN env var or paste your real token into TOKEN.")
 
     app = ApplicationBuilder().token(TOKEN).build()
